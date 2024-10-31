@@ -63,10 +63,23 @@ footer {
 }
     </style>
     <script>
-        function changeLanguage(lang) {
-            // Redirigeix a l'idioma seleccionat
-            window.location.href = '/' + lang + '/';
+        const language = navigator.language || navigator.userLanguage; // Obtenir l'idioma del navegador
+
+        if (language.startsWith('ca')) {
+            // Català
+            window.location.href = 'https://ula406.github.io/gala.store/ca/';
+        } else if (language.startsWith('es')) {
+            // Castellà
+            window.location.href = 'https://ula406.github.io/gala.store/es/';
+        } else if (language.startsWith('en')) {
+            // Anglès
+            window.location.href = 'https://ula406.github.io/gala.store/en/';
+        } else {
+            // Idioma no reconegut, pots redirigir a una URL per defecte
+            window.location.href = 'https://ula406.github.io/gala.store/';
+            alert('Hi ha hagut un error, torna a intentar-ho més endavant');
         }
+
     </script>
 </head>
 <body>
