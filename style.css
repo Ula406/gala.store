@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'NomDeLaFont';
+  src: url('fonts/RubikWetPaint-Regular.ttf') format('ttf'); /* Assegura't que la ruta és correcta */
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: 'RubikWetPaint', sans-serif;
+  color: white;
+  text-align: center;
+}
+body{
+  padding-top: 80px;
+  padding: min(50px, 7%);
+  background-color: rgb(13, 13, 20);
+  color: white;
+  font-family: 'RubikWetPaint', sans-serif;  
+}
+h1{
+  margin: 30px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-image: cover;
+  background-image: url(https://img.freepik.com/vector-gratis/fondo-desenfocado-tonos-rosas_1102-31.jpg);
+  color: #fff;
+  position: fixed; /* Fa que el nav sigui fixe */
+  top: 0;
+  left: 0;
+  width: 100%; /* Amplada completa */
+  z-index: 1000; /* Per sobre del contingut */
+}
+
+nav svg {
+  padding-right: 20px;
+}
+
+.card{
+  padding: 2em;
+  border: 1px solid rgb(75, 82, 92);
+  border-radius: 10px;
+  background-color: #222429;
+  text-align: center;
+}
+
+.card img {
+  align-items: flex-start;
+  width: 50%;
+  height: 60%;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+  gap: 15px;
+  justify-content: center;
+}
