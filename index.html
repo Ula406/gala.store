@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-language Image Gallery</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.language-selector {
+    margin-top: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+    </style>
+    <script>
+        function changeLanguage(lang) {
+            // Redirigeix a l'idioma seleccionat
+            window.location.href = '/' + lang + '/';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Hello :)</h1>
+        <div class="language-selector">
+            <label for="language">Choose a language:</label>
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="ca">Català</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzDt53GWJDloxJCgR2UxzIvAD7Ivc5REnRww&s" alt="Image 1">
+            <img src="https://wallpapercave.com/wp/wp9761399.jpg" alt="Image 2">
+            <img src="https://4kwallpapers.com/images/wallpapers/mountains-moon-scenic-france-5k-8k-7360x4912-428.jpg" alt="Image 3">
+            <img src="https://images3.alphacoders.com/120/1201621.jpg" alt="Image 4">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Image Gallery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
